@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/CSS/login.css">
+    <title>diet Recommendation system</title>
+</head>
+<body>
+    <!-- login hero section -->
+    <div class="login-section">
+        <div class="login-content">
+            <h1>Log In</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Log In</span>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- login form -->
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Log In</h1>
+            <form action="/login" method="POST">
+                <div class="input-group">
+                    <label for="email">Username or Email</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" name="remember"> Remember Me
+                    </label>
+                    <a href="#">Forgot My Password?</a>
+                </div>
+                <button type="submit">Log In Now</button>
+                <div class="register-link">
+                    <p>Not a member? <a href="register.html">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
