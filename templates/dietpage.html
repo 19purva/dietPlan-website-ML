@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Diet Plan Result</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .bmi {
+            font-weight: bold;
+            color: #ff6347;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .mealplan {
+            background-color: #e7f3e7;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+         
+         .chart-container {
+            position: relative;
+            width: 50%; /* Adjust width as needed */
+            max-width: 400px; /* Max width of the chart */
+            margin: auto; /* Center the chart */
+        }
+        canvas {
+            width: 100% !important; /* Ensure canvas takes full container width */
+            height: auto !important; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Recommended Diet Plan</h1>
+        <p>{{ diet_plan }}</p>
+
+        <div class="meal-plan">
+            <h3>Recommended Meals</h3>
+            <p><strong>Breakfast:</strong> {{ recipe_plan['breakfast'] }}</p>
+            <p><strong>Lunch:</strong> {{ recipe_plan['lunch'] }}</p>
+            <p><strong>Dinner:</strong> {{ recipe_plan['dinner'] }}</p>
+        </div>
+
+        <p class="bmi"><strong>Your BMI:</strong> {{ bmi_user }}</p>
+        <h2>Nutritional Breakdown</h2>
+        <div class="chart-container">
+        <canvas id="nutritionChart"></canvas>
+        </div>
+        <!-- Embed JSON data -->
+    <script id="nutrition-data" type="application/json">
+        {
+            "carbs": {{ nutrition['carbs'] | default(0) | tojson }},
+            "proteins": {{ nutrition['proteins'] | default(0) | tojson }},
+            "fats": {{ nutrition['fats'] | default(0) | tojson }}
+        }
+    </script>
+
+    <script>
+        // Retrieve data from JSON script
+        var nutritionData = JSON.parse(document.getElementById('nutrition-data').textContent);
+        
+        // Log values to verify
+        console.log('Carbs:', nutritionData.carbs);
+        console.log('Proteins:', nutritionData.proteins);
+        console.log('Fats:', nutritionData.fats);
+
+        // Create the pie chart
+        var ctx = document.getElementById('nutritionChart').getContext('2d');
+        var nutritionChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Carbohydrates', 'Proteins', 'Fats'],
+                datasets: [{
+                    label: 'Nutritional Breakdown',
+                    data: [nutritionData.carbs, nutritionData.proteins, nutritionData.fats],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Nutritional Breakdown (in %)'
+                    }
+                }
+            }
+        });
+    </script>
+      <div class="button-container">
+        <a href="{{ url_for('bmi') }}">Go back</a>
+        <a href = "{{ url_for('reccrecipies') }}">Get Recipes</a>
+    </div>
+    </div>
+</body>
+</html>

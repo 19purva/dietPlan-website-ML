@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/static/CSS/Home.css">
+    <link rel="stylesheet" href="/static/CSS/blog.css">
+   <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <!-- <li><a href="user.html">Pages</a></li>
+                <ul class="dropdown-menu">
+                   
+                    <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                    <li><a href="{{ url_for('testimonial') }}">Testimonials</a></li>
+                    <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+                    <li><a href="PricingPlan.html">Pricing plan</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </li> -->
+            <li><a href="{{ url_for('aboutus') }}">Pages</a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                   
+                    <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+                    <!-- <li><a href="PricingPlan.html">Pricing plan</a></li>
+                    <li><a href="services.html">Services</a></li> -->
+                </ul>
+            </li>
+            <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="user.html">User</a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
+            </li>
+        </ul>
+        <img  class="logo" src="/static/images/logo1.png" alt="" style="width: 200px; object-fit:cover;height:70px">
+    </div>
+</nav>
+
+
+   <!-- hero section -->
+   <div class="blog-section">
+    <div class="blog-content">
+        <h1>Blogs</h1>
+    </div>
+</div>
+
+   
+  <section class="blog-container">
+    <!-- Blog Card 1 -->
+    <div class="blog-card">
+      <img src="/static/images/recipe1.jpg" alt="Healthy Eating">
+      <h3>5 Tips for Healthy Eating</h3>
+      <p>Discover simple and effective tips to improve your daily eating habits.</p>
+      <a href="">Read More</a>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <img src="/static/images/yogapose.jpg" alt="Workout Plan">
+      <h3>Best Workouts for Beginners</h3>
+      <p>Kickstart your fitness journey with easy and effective workout routines.</p>
+      <a href="#">Read More</a>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <img src="/static/images/recipe-side-img3.jpg" alt="Meal Planning">
+      <h3>How to Create a Balanced Meal Plan</h3>
+      <p>Learn how to balance your meals for optimal health and energy throughout the day.</p>
+      <a href="#">Read More</a>
+    </div>
+  </section>
+
+
+
+  
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column about">
+            <h3 >NutriWise</h3>
+            <p>Nutriwise delivers personalized nutrition solutions tailored to your unique needs and goals. 
+                By analyzing your health data, lifestyle, and preferences, Nutriwise crafts customized diet plans to enhance your well-being.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Condition</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column info">
+            <h3>Information</h3>
+            <p><strong>Phone:</strong> +8928240635 <br> +9867834012</p>
+            <p><strong>Email:</strong> Nutriwise@gmail.com</p>
+            <p><strong>Address:</strong> 11 Andheri Colony, Mumbai-400078</p>
+        </div>
+
+        <div class="footer-column newsletter">
+            <h3>Newsletter</h3>
+            <p>Stay updated with the latest in nutrition and wellness! Subscribe to the Nutriwise newsletter for expert tips, exclusive offers, and personalized health insights delivered straight to your inbox.</p>
+            <form>
+                <input type="email" placeholder="Enter Your Email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 NutriWise. All Rights Reserved by <a href="#">NutriWise</a></p>
+    </div>
+</footer>
+
+  
+  
+  
+     
+  
+</body>
+</html>

@@ -21,31 +21,30 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">Pages</a>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('aboutus') }}">Pages</a>
                     <ul class="dropdown-menu">
-                        <li><a href="aboutus.html">About us</a></li>
-                        <li><a href="testimonial.html">Testimonials</a></li>
-                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                        <li><a href="{{ url_for('testimonial') }}">Testimonials</a></li>
+                        <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
                         <li><a href="PricingPlan.html">Pricing plan</a></li>
                         <li><a href="services.html">Services</a></li>
                     </ul>
                 </li>
                 <li><a href="Blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 <li><a href="user.html">User</a>
                     <ul class="dropdown-menu">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
                     </ul>
                 </li>
             </ul>
             <h1 class="logo">
-                <img src="/static/images//logo1.png" alt="" style="width: 300px; object-fit:cover;height:50px">
+                <img src="/static/images/logo1.png" alt="" style="width: 300px; object-fit:cover;height:50px">
               </h1>
         </div>
     </nav>
-
 
 
     

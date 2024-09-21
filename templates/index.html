@@ -21,36 +21,44 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">Pages</a>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <!-- <li><a href="user.html">Pages</a></li>
                     <ul class="dropdown-menu">
-                        <li><a href="aboutus.html">About us</a></li>
-                        <li><a href="testimonial.html">Testimonials</a></li>
-                        <li><a href="recipes.html">Recipes</a></li>
+                       
+                        <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                        <li><a href="{{ url_for('testimonial') }}">Testimonials</a></li>
+                        <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
                         <li><a href="PricingPlan.html">Pricing plan</a></li>
                         <li><a href="services.html">Services</a></li>
                     </ul>
+                </li> -->
+                <li><a href="{{ url_for('aboutus') }}">Pages</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                       
+                        <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+                        <!-- <li><a href="PricingPlan.html">Pricing plan</a></li>
+                        <li><a href="services.html">Services</a></li> -->
+                    </ul>
                 </li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 <li><a href="user.html">User</a>
                     <ul class="dropdown-menu">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
                     </ul>
                 </li>
             </ul>
-            <h1 class="logo">
-                <img src="../images/logo1.png" alt="" style="width: 300px; object-fit:cover;height:50px">
-              </h1>
+            <img  class="logo" src="/static/images/logo1.png" alt="" style="width: 200px; object-fit:cover;height:70px">
         </div>
     </nav>
 
     <!-- hero section -->
     <div class="hero">
         <div class="hero-content">
-            <h1>Nourishing with Healthy Food Choices</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+            <h1>Fuel Your Body with Personalized Nutrition</h1>
+            <p>Unlock your healthiest self with personalized meal plans designed for your unique body and lifestyle. Start your journey to better nutrition today!</p>
             <div class="hero-buttons">
                 <a href="#" class="btn learn-more">Learn More</a>
                 <a href="#" class="btn contact-us">Contact Us</a>
@@ -61,31 +69,31 @@
         </div>
     </div>
 
-    <!-- card container -->
-    <div class="cards-container">
+     <!-- card container -->
+     <div class="cards-container">
         <div class="card">
             <div class="card-icon">
                 <img src="/static/images/excercise icon.png" alt="Daily Exercise">
             </div>
             <h3>Daily Exercise</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <p>Stay active with tailored workout routines that fit your goals and schedule. Boost your energy, burn calories, and build strength—all while having fun!</p>
+            <a href="https://www.healthline.com/health/fitness-exercise/at-home-workouts" class="learn-more">Learn More</a>
         </div>
         <div class="card">
             <div class="card-icon">
                 <img src="/static/images/natural food.avif" alt="Natural Food">
             </div>
             <h3>Natural Foods</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <p>Discover the power of nature with fresh, wholesome ingredients. Enjoy nutrient-rich, natural foods that nourish your body and elevate your overall well-being.</p>
+            <a href="https://www.healthline.com/nutrition/50-super-healthy-foods#meat" class="learn-more">Learn More</a>
         </div>
         <div class="card">
             <div class="card-icon">
                 <img src="/static/images/nutrition plan.jfif" alt="Nutrition Plans">
             </div>
             <h3>Nutrition Plans</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <a href="#" class="learn-more">Learn More</a>
+            <p>Transform your diet with personalized nutrition plans crafted to suit your health needs and preferences. Balanced, delicious, and easy-to-follow meals for a healthier you.</p>
+            <a href="https://blog.eatthismuch.com/" class="learn-more">Learn More</a>
         </div>
     </div>
     
@@ -93,22 +101,22 @@
     <!-- about us -->
     <div class="newcontainer">
         <div class="left">
-            <h1>Change Your Life in the next 90 Days of Practice</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            <h1>Change Your Life in the next 90 <br>Days of Practice</h1>
+            <p>Transform your life in just 90 days with daily, intentional practice. Build healthier habits, boost your energy, and feel your best with a personalized approach tailored to your goals. Start your journey today and watch the results unfold</p>
             <div class="plans">
                 <div class="plan">
                     <div class="card-icon">
                         <img src="/static/images/nutrition plan.jfif" alt="Nutrition Plans">
                     </div>
                     <h3>Personalized Nutrition Plan</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <p>Get a nutrition plan that's uniquely tailored to your body, lifestyle, and goals. Enjoy balanced meals designed to fuel your health and help you achieve lasting results.</p>
                 </div>
                 <div class="plan">
                     <div class="card-icon">
                         <img src="/static/images/excercise icon.png" alt="Daily Exercise">
                     </div>
                     <h3>Personalized Exercises Plan</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <p>Unlock a workout plan tailored to your fitness level, goals, and schedule. Stay active with exercises designed just for you, helping you achieve faster, sustainable results.</p>
                 </div>
             </div>
             <button class="btn">Read More</button>
@@ -118,7 +126,7 @@
         </div>
     </div>
 
-    <!-- Diet & Nutrition  services Container -->
+    <!-- Diet & Nutrition  services Container
     <div class="services-container">
         <div class="services-section">
             <h2 class="text-center mb-4">Diet & Nutritionist Services</h2>
@@ -143,18 +151,18 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
 <!-- BMI calculator -->
 <div class="bmi-section">
     <div class="bmi-form">
         <h2>Calculate Your BMI</h2>
-        <form>
+        <form action="" method="GET" id="bmiForm">
             <div class="form-group">
-                <input type="text" placeholder="Height*" required>
+                <input type="text" placeholder="Height* in cm" required>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Weight*" required>
+                <input type="text" placeholder="Weight* in kg" required>
             </div>
             <div class="form-group">
                 <input type="text" placeholder="Age*" required>
@@ -177,8 +185,11 @@
                     <option value="extra">Extra Active</option>
                 </select>
             </div>
-            <button type="submit" class="bmi-btn">Calculate</button>
+            <button type="submit" class="bmi-btn"  >Calculate</button>
+            
+          
         </form>
+      
     </div>
     <div class="bmi-chart">
         <h2>BMI Calculator Chart</h2>
@@ -210,11 +221,10 @@
                     <td>30.0 - above</td>
                     <td>Severely Obese</td>
                 </tr>
-            </tbody>
+        </tbody>
         </table>
     </div>
 </div>
-
 <!-- blog section -->
 <div class="blog-section">
     <h2>Latest Recipe From Blog</h2>
@@ -223,8 +233,8 @@
             <img src="/static/images/homeblog1.jpg" alt="Recipe 1">
             <div class="blog-content">
                 <p class="blog-date">22 April, 2024</p>
-                <h3>7 Healthy & Simple, Gluten-Free Cookie, Cake Recipes</h3>
-                <a href="#" class="read-more">Read More</a>
+                <h3>Healthy & Simple Recipes For Weight Loss</h3>
+                <a href="https://www.bbcgoodfood.com/recipes/collection/healthy-recipes-for-weight-loss" class="read-more">Read More</a>
             </div>
         </div>
         <div class="blog-card">
@@ -232,7 +242,7 @@
             <div class="blog-content">
                 <p class="blog-date">23 April, 2024</p>
                 <h3>Top 5 Tips Why Self Care Is More Important</h3>
-                <a href="#" class="read-more">Read More</a>
+                <a href="https://www.verywellmind.com/self-care-strategies-overall-stress-reduction-3144729" class="read-more">Read More</a>
             </div>
         </div>
         <div class="blog-card">
@@ -240,7 +250,7 @@
             <div class="blog-content">
                 <p class="blog-date">24 April, 2024</p>
                 <h3>Top 8 Ways for Living Healthy Life Important</h3>
-                <a href="#" class="read-more">Read More</a>
+                <a href="https://www.who.int/philippines/news/feature-stories/detail/20-health-tips-for-2020" class="read-more">Read More</a>
             </div>
         </div>
     </div>
@@ -250,8 +260,10 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column about">
-            <h3>Arrola</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis ipsum suspendisse.</p>
+            <h3 >NutriWise</h3>
+            <p>Nutriwise delivers personalized nutrition solutions tailored to your unique needs and goals. 
+                By analyzing your health data, lifestyle, and preferences, Nutriwise crafts customized diet plans to enhance your well-being.
+            </p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -273,14 +285,14 @@
 
         <div class="footer-column info">
             <h3>Information</h3>
-            <p><strong>Phone:</strong> +8245678924 <br> +8245668964</p>
-            <p><strong>Email:</strong> hello@arrola.com <br> info@arrola.com</p>
-            <p><strong>Address:</strong> 5ut, Stamford South, New Zealand</p>
+            <p><strong>Phone:</strong> +8928240635 <br> +9867834012</p>
+            <p><strong>Email:</strong> Nutriwise@gmail.com</p>
+            <p><strong>Address:</strong> 11 Andheri Colony, Mumbai-400078</p>
         </div>
 
         <div class="footer-column newsletter">
             <h3>Newsletter</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <p>Stay updated with the latest in nutrition and wellness! Subscribe to the Nutriwise newsletter for expert tips, exclusive offers, and personalized health insights delivered straight to your inbox.</p>
             <form>
                 <input type="email" placeholder="Enter Your Email">
                 <button type="submit">Subscribe</button>
@@ -288,7 +300,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>Copyright &copy; 2024 Arrola. All Rights Reserved by <a href="#">HiBootstrap</a></p>
+        <p>Copyright &copy; 2024 NutriWise. All Rights Reserved by <a href="#">NutriWise</a></p>
     </div>
 </footer>
 

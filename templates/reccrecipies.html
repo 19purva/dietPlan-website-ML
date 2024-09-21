@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/CSS/reccrecipies.css">
+    <title>Recommendation</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('aboutus') }}">Pages</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                        <!-- <li><a href="{{ url_for('index') }}">Testimonials</a></li> -->
+                        <li><a href="{{ url_for('recipes') }}">Recipes</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="user.html">User</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img  class="logo" src="/static/images/logo1.png" alt="" style="width: 200px; object-fit:cover;height:70px">
+        </div>
+    </nav>
+
+
+
+    <!-- <div class="recipies">
+        <div class="recipies-header">
+            <p>DIET RECOMMENDATION</p>
+        </div>
+        <div class="sub-header">
+            <p>Recommendated Recipies:</p>
+        </div>
+    </div> -->
+    <div class="recipies">
+        <div class="recipies-header">
+           
+            <p>DIET RECOMMENDATION</p>
+        </div>
+
+        <div class="sub-header">
+           
+            <p>Recommended Recipes</p>
+            <img src="/static/images/stew.gif" alt="Recipe Icon" class="icon"> <!-- Add the correct path to your image -->
+           
+        </div>
+        
+        <div class="recipe-block">
+
+
+
+
+
+            <!-- Breakfast Category -->
+            <div class="meal-category">
+                <h3>BREAKFAST</h3>
+                <!-- <img src="/breakfast.png" alt="Recipe Icon" class="icon1"> -->
+                
+                <div class="recipe-card">
+                    <input type="checkbox" id="breakfast1" class="dropdown-toggle">
+                    <label for="breakfast1" class="dropdown-btn">
+                        Moong dal chilla
+                        <span class="arrow">&#9662;</span> <!-- Dropdown arrow -->
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Moong dal chilla </p>
+                        <br>
+                        <ul>
+                            <li>Moong dal (yellow split gram)</li>
+                            <li>Green chilies</li>
+                            <li>Ginger</li>
+                            <li>Cumin seeds</li>
+                            <li>Turmeric powder</li>
+                            <li>Salt</li>
+                            <li>Oil</li>
+                        </ul>
+                        <p>Recipe Instructions:</p>
+                        <br>
+                        <ul>
+                            <li>Soak moong dal in water for 2 hours.</li>
+                            <li>Drain and grind to a smooth batter with green chilies, ginger, and cumin seeds.</li>
+                            <li>Add turmeric powder and salt.</li>
+                            <li>Heat oil in a pan, pour a ladleful of batter, and spread it into a thin circle.</li>
+                            <li>Cook until golden brown on both sides.</li>
+                        </ul>
+                        <p>Cooking and Preparation Time:</p>
+                        <br>
+                        <ul>
+                            <li>Cook Time: 5-7 minutes per chilla.</li>
+                            <li>Preparation Time: 2 hours (soaking) + 10 minutes (batter preparation)</li>
+                            <li>Total Time: Approximately 30 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="recipe-card">
+                    <input type="checkbox" id="breakfast2" class="dropdown-toggle">
+                    <label for="breakfast2" class="dropdown-btn">
+                        Smoothie bowl
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Smoothie bowl </p>
+                        <br>
+<ul>
+    <li>1 banana (frozen)</li>
+    <li>1/2 cup berries (fresh or frozen)</li>
+    <li>1/2 cup Greek yogurt</li>
+    <li>1/4 cup almond milk (or any milk of choice)</li>
+    <li>1 tablespoon honey or maple syrup (optional)</li>
+    <li>Toppings: granola, fresh fruit, nuts, seeds</li>
+</ul>
+<p>Recipe Instructions:</p>
+<br>
+<ul>
+    <li>In a blender, combine the frozen banana, berries, Greek yogurt, and almond milk.</li>
+    <li>Blend until smooth. Adjust consistency with more almond milk if needed.</li>
+    <li>Pour into a bowl and top with granola, fresh fruit, nuts, and seeds.</li>
+</ul>
+<p>Cooking and Preparation Time:</p>
+<br>
+<ul>
+    <li>Cooking Time: None</li>
+    <li>Preparation Time: 5-10 minutes</li>
+    <li>Total Time: 5-10 minutes</li>
+</ul>
+                    </div>
+                </div>
+
+
+
+                <!--new cards-->
+                <div class="recipe-card">
+                    <input type="checkbox" id="breakfast3" class="dropdown-toggle">
+                    <label for="breakfast3" class="dropdown-btn">
+                        Pesarattu (Green Gram Dosa)
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Pesarattu (Green Gram Dosa)</p>
+                        <br>
+                        <ul>
+                            <li>1 cup green gram (moong beans)</li>
+                            <li>2-3 green chilies</li>
+                            <li>1-inch piece of ginger</li>
+                            <li>1 teaspoon cumin seeds</li>
+                            <li>Salt to taste</li>
+                            <li>Water (as needed for batter consistency)</li>
+                            <li>Oil for cooking</li>
+                        </ul>
+                        <p>Recipe Instructions:</p>
+                        <br>
+                        <ul>
+                            <li>Soak green gram overnight or for at least 6 hours.</li>
+                            <li>Drain and grind with green chilies, ginger, and cumin seeds to a smooth batter, adding water as needed.</li>
+                            <li>Add salt to taste.</li>
+                            <li>Heat a non-stick pan, pour a ladleful of batter, and spread it thin like a dosa.</li>
+                            <li>Drizzle oil around the edges and cook until golden brown.</li>
+                        </ul>
+                        <p>Cooking and Preparation Time:</p>
+                        <br>
+                        <ul>
+                            <li>Cooking Time: 5-7 minutes per dosa</li>
+                            <li>Preparation Time: 6 hours (soaking) + 10 minutes (batter preparation)</li>
+                            <li>Total Time: Approximately 6 hours 30 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="recipe-card">
+                    <input type="checkbox" id="breakfast4" class="dropdown-toggle">
+                    <label for="breakfast4" class="dropdown-btn">
+                        Vegetable Oats
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Vegetable Oats</p>
+    <br>
+    <ul>
+        <li>1 cup rolled oats</li>
+        <li>1/2 cup chopped carrots</li>
+        <li>1/2 cup chopped beans</li>
+        <li>1/4 cup peas</li>
+        <li>1 small onion, chopped</li>
+        <li>1 green chili, chopped</li>
+        <li>1/2 teaspoon cumin seeds</li>
+        <li>1/4 teaspoon turmeric powder</li>
+        <li>Salt to taste</li>
+        <li>1 tablespoon oil or ghee</li>
+        <li>Water (2 cups)</li>
+    </ul>
+    <p>Recipe Instructions:</p>
+    <br>
+    <ul>
+        <li>Heat oil or ghee in a pan, add cumin seeds, and sauté until they crackle.</li>
+        <li>Add chopped onions and green chili, and sauté until onions turn golden.</li>
+        <li>Add the chopped vegetables and turmeric powder, cook for 2-3 minutes.</li>
+        <li>Pour in water and bring it to a boil.</li>
+        <li>Add oats and salt, cook for 5-7 minutes, stirring occasionally.</li>
+        <li>Cook until the oats absorb the water and the vegetables are tender.</li>
+    </ul>
+    <p>Cooking and Preparation Time:</p>
+    <br>
+    <ul>
+        <li>Cooking Time: 10-12 minutes</li>
+        <li>Preparation Time: 10 minutes</li>
+        <li>Total Time: 20-25 minutes</li>
+    </ul>
+                    </div>
+                </div>
+            </div>
+    
+
+
+
+
+
+            <!-- Lunch Category -->
+            <div class="meal-category">
+                <h3>LUNCH</h3>
+                <div class="recipe-card">
+                    <input type="checkbox" id="lunch1" class="dropdown-toggle">
+                    <label for="lunch1" class="dropdown-btn">
+                       Mixed Vegetable Curry
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Mixed Vegetable Curry</p>
+                        
+<br>
+<ul>
+    <li>Mixed vegetables (potatoes, carrots, peas, beans)</li>
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Garlic</li>
+    <li>Ginger</li>
+    <li>Curry powder</li>
+    <li>Turmeric</li>
+    <li>Salt</li>
+    <li>Oil</li>
+</ul>
+<p>Recipe Instructions:</p>
+<br>
+<ul>
+    <li>Heat oil in a pan and sauté onions, garlic, and ginger until golden.</li>
+    <li>Add chopped tomatoes and cook until soft.</li>
+    <li>Add curry powder and turmeric, cook for 2 minutes.</li>
+    <li>Add mixed vegetables, salt, and enough water to cover.</li>
+    <li>Simmer until vegetables are tender.</li>
+</ul>
+<p>Cooking and Preparation Time:</p>
+<br>
+<ul>
+    <li>Cook Time: 20-25 minutes</li>
+    <li>Preparation Time: 10 minutes</li>
+    <li>Total Time: 35 minutes</li>
+</ul>
+                    </div>
+                </div>
+
+
+                <div class="recipe-card">
+                    <input type="checkbox" id="lunch2" class="dropdown-toggle">
+                    <label for="lunch2" class="dropdown-btn">
+                       Chickpea Salad with Cucumber
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Chickpea Salad </p>
+                       
+<br>
+<ul>
+    <li>Chickpeas</li>
+    <li>Cucumbers</li>
+    <li>Red onions</li>
+    <li>Lemon juice</li>
+    <li>Olive oil</li>
+    <li>Fresh herbs (parsley, cilantro)</li>
+    <li>Salt</li>
+    <li>Pepper</li>
+</ul>
+<p>Recipe Instructions:</p>
+<br>
+<ul>
+    <li>Combine chickpeas, diced cucumbers, and chopped onions in a bowl.</li>
+    <li>Mix lemon juice, olive oil, salt, and pepper, then toss with the salad.</li>
+    <li>Garnish with fresh herbs.</li>
+</ul>
+<p>Cooking and Preparation Time:</p>
+<br>
+<ul>
+    <li>Cooking Time: None</li>
+    <li>Preparation Time: 10 minutes</li>
+    <li>Total Time: 10 minutes</li>
+</ul>
+                    </div>
+                </div>
+
+                <!--new cards-->
+                <div class="recipe-card">
+                    <input type="checkbox" id="lunch3" class="dropdown-toggle">
+                    <label for="lunch3" class="dropdown-btn">
+                        Soya chunks curry
+
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Soya Chunks Curry</p>
+    <br>
+    <ul>
+        <li>1 cup soya chunks</li>
+        <li>1 large onion, chopped</li>
+        <li>1 large tomato, chopped</li>
+        <li>2 green chilies</li>
+        <li>1 teaspoon ginger-garlic paste</li>
+        <li>1 teaspoon cumin seeds</li>
+        <li>1/2 teaspoon turmeric powder</li>
+        <li>1 teaspoon red chili powder</li>
+        <li>1 teaspoon garam masala</li>
+        <li>1 tablespoon oil</li>
+        <li>Fresh coriander leaves for garnish</li>
+        <li>Salt to taste</li>
+    </ul>
+    <p>Recipe Instructions:</p>
+    <br>
+    <ul>
+        <li>Boil soya chunks in water for 5-7 minutes. Drain and rinse under cold water. Squeeze out excess water.</li>
+        <li>Heat oil in a pan, add cumin seeds, and let them splutter.</li>
+        <li>Add chopped onions and green chilies, sauté until onions turn golden.</li>
+        <li>Add ginger-garlic paste and sauté for another minute.</li>
+        <li>Add chopped tomatoes, turmeric, red chili powder, and salt. Cook until tomatoes soften.</li>
+        <li>Add the boiled soya chunks and garam masala, mix well. Simmer for 5-7 minutes.</li>
+        <li>Garnish with fresh coriander leaves before serving.</li>
+    </ul>
+    <p>Cooking and Preparation Time:</p>
+    <br>
+    <ul>
+        <li>Cooking Time: 15-20 minutes</li>
+        <li>Preparation Time: 10 minutes</li>
+        <li>Total Time: 25-30 minutes</li>
+    </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="recipe-card">
+                    <input type="checkbox" id="lunch4" class="dropdown-toggle">
+                    <label for="lunch4" class="dropdown-btn">
+                       Vegetable Dal Khichdi
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Vegetable Dal Khichdi</p>
+                        <br>
+                        <ul>
+                            <li>1/2 cup rice</li>
+                            <li>1/2 cup moong dal (split yellow lentils)</li>
+                            <li>1/2 cup mixed vegetables (carrots, peas, beans)</li>
+                            <li>1 small onion, chopped</li>
+                            <li>1 tomato, chopped</li>
+                            <li>1/2 teaspoon turmeric powder</li>
+                            <li>1/2 teaspoon cumin seeds</li>
+                            <li>1 tablespoon ghee or oil</li>
+                            <li>Salt to taste</li>
+                            <li>Water (as needed)</li>
+                            <li>Fresh coriander leaves for garnish</li>
+                        </ul>
+                        <p>Recipe Instructions:</p>
+                        <br>
+                        <ul>
+                            <li>Rinse rice and dal together. Set aside.</li>
+                            <li>Heat ghee or oil in a pressure cooker, add cumin seeds, and let them splutter.</li>
+                            <li>Add chopped onions and sauté until golden.</li>
+                            <li>Add chopped tomatoes, turmeric powder, and salt. Cook until tomatoes soften.</li>
+                            <li>Add the mixed vegetables, rice, and dal, and mix well.</li>
+                            <li>Add water (about 3-4 cups) and pressure cook for 3-4 whistles.</li>
+                            <li>Let the pressure release naturally, then open the cooker and garnish with fresh coriander leaves.</li>
+                        </ul>
+                        <p>Cooking and Preparation Time:</p>
+                        <br>
+                        <ul>
+                            <li>Cooking Time: 15-20 minutes</li>
+                            <li>Preparation Time: 10 minutes</li>
+                            <li>Total Time: 25-30 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            
+    
+            <!-- Dinner Category -->
+            <div class="meal-category">
+                <h3>DINNER</h3>
+                <div class="recipe-card">
+                    <input type="checkbox" id="dinner1" class="dropdown-toggle">
+                    <label for="dinner1" class="dropdown-btn">
+                       Quinoa upma
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Quinoa upma</p>
+                        <br>
+<ul>
+    <li>1 cup quinoa</li>
+    <li>1/2 cup chopped onions</li>
+    <li>1/2 cup chopped tomatoes</li>
+    <li>1/2 cup mixed vegetables (carrots, peas, beans)</li>
+    <li>1 green chili, chopped</li>
+    <li>1 teaspoon mustard seeds</li>
+    <li>1/2 teaspoon turmeric powder</li>
+    <li>1/2 teaspoon cumin seeds</li>
+    <li>Salt to taste</li>
+    <li>Oil for cooking</li>
+    <li>Fresh coriander leaves for garnish</li>
+</ul>
+<p>Recipe Instructions:</p>
+<br>
+<ul>
+    <li>Rinse the quinoa under cold water. Cook quinoa according to package instructions and set aside.</li>
+    <li>Heat oil in a pan, add mustard seeds and cumin seeds. Once they splutter, add onions and green chili. Sauté until onions are translucent.</li>
+    <li>Add chopped tomatoes, turmeric powder, and salt. Cook until tomatoes are soft.</li>
+    <li>Add mixed vegetables and cook for a few minutes until they are tender.</li>
+    <li>Add the cooked quinoa and mix well. Cook for another 2-3 minutes.</li>
+    <li>Garnish with fresh coriander leaves before serving.</li>
+</ul>
+<p>Cooking and Preparation Time:</p>
+<br>
+<ul>
+    <li>Cook Time: 15-20 minutes</li>
+    <li>Preparation Time: 10 minutes</li>
+    <li>Total Time: Approximately 25-30 minutes</li>
+</ul> 
+                    </div>
+                </div>
+
+
+
+                <div class="recipe-card">
+                    <input type="checkbox" id="dinner2" class="dropdown-toggle">
+                    <label for="dinner2" class="dropdown-btn">
+                        Oats khichdi
+
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Oats khichdi</p>
+                        <br>
+                        <ul>
+                            <li>Oats</li>
+                            <li>Moong dal (yellow split gram)</li>
+                            <li>Green chilies</li>
+                            <li>Ginger</li>
+                            <li>Cumin seeds</li>
+                            <li>Turmeric powder</li>
+                            <li>Salt</li>
+                            <li>Oil</li>
+                        </ul>
+                        <p>Recipe Instructions:</p>
+                        <br>
+                        <ul>
+                            <li>Roast oats and moong dal in a pan for a few minutes.</li>
+                            <li>Add chopped green chilies, ginger, and cumin seeds.</li>
+                            <li>Add turmeric powder and salt.</li>
+                            <li>Pour water and cook until the oats and moong dal are soft and fully cooked.</li>
+                        </ul>
+                        <p>Cooking and Preparation Time:</p>
+                        <br>
+                        <ul>
+                            <li>Cook Time: 10-15 minutes.</li>
+                            <li>Preparation Time: 10 minutes.</li>
+                            <li>Total Time: Approximately 25 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!--new cards-->
+                <div class="recipe-card">
+                    <input type="checkbox" id="dinner3" class="dropdown-toggle">
+                    <label for="dinner3" class="dropdown-btn">
+                        Grilled paneer
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Grilled Paneer</p>
+                        <br>
+                        <ul>
+                            <li>200g paneer (cottage cheese), cut into cubes</li>
+                            <li>1 tablespoon yogurt</li>
+                            <li>1 teaspoon red chili powder</li>
+                            <li>1/2 teaspoon turmeric powder</li>
+                            <li>1 teaspoon cumin powder</li>
+                            <li>1 teaspoon garam masala</li>
+                            <li>1 tablespoon lemon juice</li>
+                            <li>1 tablespoon oil</li>
+                            <li>Salt to taste</li>
+                            <li>Fresh coriander leaves for garnish</li>
+                        </ul>
+                        <p>Recipe Instructions:</p>
+                        <br>
+                        <ul>
+                            <li>In a bowl, mix yogurt, red chili powder, turmeric powder, cumin powder, garam masala, lemon juice, oil, and salt.</li>
+                            <li>Add paneer cubes to the mixture and marinate for 15-20 minutes.</li>
+                            <li>Preheat a grill pan or tawa and lightly grease with oil.</li>
+                            <li>Grill the marinated paneer cubes on each side until golden and crisp.</li>
+                            <li>Garnish with fresh coriander leaves before serving.</li>
+                        </ul>
+                        <p>Cooking and Preparation Time:</p>
+                        <br>
+                        <ul>
+                            <li>Cook Time: 10-12 minutes</li>
+                            <li>Preparation Time: 10 minutes + 20 minutes marination</li>
+                            <li>Total Time: 30-35 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <div class="recipe-card">
+                    <input type="checkbox" id="dinner4" class="dropdown-toggle">
+                    <label for="dinner4" class="dropdown-btn">
+                        Vegetable stew
+                        <span class="arrow">&#9662;</span>
+                    </label>
+                    <div class="dropdown-content">
+                        <p>Details for Vegetable Stew</p>
+                        <br>
+                        <ul>
+                            <li>1 cup mixed vegetables (carrots, potatoes, beans, peas)</li>
+                            <li>1 onion, chopped</li>
+                            <li>2 green chilies, slit</li>
+                            <li>1-inch piece of ginger, chopped</li>
+                            <li>1 teaspoon mustard seeds</li>
+                            <li>1/2 teaspoon turmeric powder</li>
+                            <li>1 cup coconut milk</li>
+                            <li>2 cups water</li>
+                            <li>1 tablespoon oil</li>
+                            <li>Salt to taste</li>
+                            <li>Fresh curry leaves for garnish</li>
+                        </ul>
+                        <p>Recipe Instructions:</p>
+                        <br>
+                        <ul>
+                            <li>Heat oil in a pan, add mustard seeds, and let them splutter.</li>
+                            <li>Add onions, green chilies, and ginger, sauté until onions are translucent.</li>
+                            <li>Add turmeric powder and mixed vegetables, sauté for 2-3 minutes.</li>
+                            <li>Add water and cook until the vegetables are tender.</li>
+                            <li>Stir in coconut milk and simmer for 5 minutes. Add salt to taste.</li>
+                            <li>Garnish with fresh curry leaves before serving.</li>
+                        </ul>
+                        <p>Cooking and Preparation Time:</p>
+                        <br>
+                        <ul>
+                            <li>Cook Time: 15-20 minutes</li>
+                            <li>Preparation Time: 10 minutes</li>
+                            <li>Total Time: 25-30 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+        
+           
+</body>
+</html>
